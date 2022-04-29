@@ -1,4 +1,4 @@
-const express = require('expres');
+const express = require('express');
 const app = express();
 const PORT = process.env.PORT || '4000';
 
@@ -7,5 +7,8 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-  res.spend('Node Express 서버 구동 완료');
+  res.send('이곳은 Node Express 서버 구동 완료');
+});
+app.get('/test', (req, res) => {
+  res.send('이곳은 테스트 화면');
 });
